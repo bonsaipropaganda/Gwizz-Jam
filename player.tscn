@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0cec3hc1wc5e"]
+
+[ext_resource type="Texture2D" uid="uid://c6hlmc1m1wwb8" path="res://character sprite/arm/arm_1.png" id="1_7voqb"]
+[ext_resource type="Texture2D" uid="uid://d0cooqakajqk2" path="res://character sprite/torso/torso_1.png" id="2_r2nwd"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+
+[node name="RightArmSprite" type="Sprite2D" parent="."]
+position = Vector2(-320, 438)
+rotation = -0.0573375
+texture = ExtResource("1_7voqb")
+
+[node name="Skeleton2D" type="Skeleton2D" parent="."]
+
+[node name="TorsoBone" type="Bone2D" parent="Skeleton2D"]
+auto_calculate_length_and_angle = false
+length = 385.928
+bone_angle = 90.0
+
+[node name="TorsoSprite" type="Sprite2D" parent="Skeleton2D/TorsoBone"]
+position = Vector2(-23, 139)
+texture = ExtResource("2_r2nwd")
+
+[node name="Right]ArmBone" type="Bone2D" parent="Skeleton2D/TorsoBone"]
+auto_calculate_length_and_angle = false
+length = 619.94
+bone_angle = 121.481
