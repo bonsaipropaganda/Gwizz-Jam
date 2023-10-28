@@ -1,33 +1,3 @@
-[gd_scene load_steps=2 format=3 uid="uid://b0cec3hc1wc5e"]
+[gd_scene format=3 uid="uid://b0cec3hc1wc5e"]
 
-[ext_resource type="Texture2D" uid="uid://hpb7mmqt7lat" path="res://Charactor-1-resized.jpg" id="1_bccwc"]
-
-[node name="CharacterBody2D" type="CharacterBody2D"]
-
-[node name="Skeleton2D" type="Skeleton2D" parent="."]
-
-[node name="TorsoBone" type="Bone2D" parent="Skeleton2D"]
-auto_calculate_length_and_angle = false
-length = 385.928
-bone_angle = 90.0
-
-[node name="UpperRightArmBone" type="Bone2D" parent="Skeleton2D/TorsoBone"]
-position = Vector2(-6, 6)
-rotation = -0.0185541
-scale = Vector2(1, 1)
-auto_calculate_length_and_angle = false
-length = 324.133
-bone_angle = 138.83
-
-[node name="LowerRightArmBone" type="Bone2D" parent="Skeleton2D/TorsoBone/UpperRightArmBone"]
-position = Vector2(-221.189, 115.916)
-rotation = -0.508806
-auto_calculate_length_and_angle = false
-length = 410.95
-bone_angle = 138.795
-
-[node name="Polygons" type="Node2D" parent="."]
-
-[node name="Polygon2D" type="Polygon2D" parent="Polygons"]
-texture = ExtResource("1_bccwc")
-skeleton = NodePath("../../Skeleton2D")
+[node name="CharacterBody2D" type="CharacterBody3D"]
